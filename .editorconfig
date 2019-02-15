@@ -1,0 +1,32 @@
+######################################################################################################################
+# EditorConfig Configuration
+# http://EditorConfig.org
+#
+# Assists with style consistency within editors. Enforced with linting.
+######################################################################################################################
+
+##
+## Prevents EditorConfig configurations that may exist in parent directories from being parsed
+##
+root = true
+
+
+##
+## Apply uniform standards to all files, unless specified
+##
+[*]
+charset = utf-8                     # Ensure UTF-8 is used to support i18n
+end_of_line = lf                    # Force unix-style line endings
+indent_style = space                # Spaces allow for lintable, author-driven formatting
+indent_size = 2                     # 2-space indentions for cleaner fit and smaller file sizes
+tab_width = 4                       # Make tabs larger to differentiate them from spaces
+insert_final_newline = true         # Ensure exactly one newline is at the end of the file (for terminal readability)
+trim_trailing_whitespace = true     # Remove any extra whitespace from the end of lines
+max_line_length = 118               # GitHub preview standard is 118 characters in width
+
+
+##
+## Documentation filetypes have different needs than code
+##
+[*.md]
+trim_trailing_whitespace = false
