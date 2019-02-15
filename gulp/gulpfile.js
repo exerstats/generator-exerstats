@@ -5,7 +5,8 @@
  * @author Andrew Vaughan <hello@andrewvaughan.io>
  */
 
-const {series} = require('gulp');
+const {series} = require('gulp'),
+  extend = require('extend');
 
 
 /**
@@ -19,11 +20,28 @@ const files = {
 
 
 /**
- * `gulp hello`
+ * `gulp lint`
  *
- * Placeholder until Gulp is properly used.
+ * Performs style and standards tests on the codebase.
  */
-exports.hello = require('./hello-world');
+exports.lint = series(
+  require('./jshint')(extend(files.source, files.tests)),
+  require('./eslint')(extend(files.source, files.tests))
+);
+
+exports.lint.description = 'Runs code-style and best-practice linting.';
+
+
+/**
+ * `gulp test`
+ *
+ * Performs unit tests and linting on the codebase.
+ */
+exports.test = series(
+  exports.lint
+);
+
+exports.test.description = 'Runs all linting and unit tests.';
 
 
 /**
@@ -31,4 +49,4 @@ exports.hello = require('./hello-world');
  *
  * Default task to run when Gulp is called.
  */
-exports.default = exports.hello;
+exports.default = exports.test;

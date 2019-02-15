@@ -22,7 +22,9 @@
   ],
   "scripts": {
     "gulp": "node_modules/gulp/bin/gulp.js",
-    "gulp:tasks": "node_modules/gulp/bin/gulp.js --tasks"
+    "gulp:tasks": "node_modules/gulp/bin/gulp.js --tasks",
+    "test": "node_modules/gulp/bin/gulp.js test",
+    "test:lint": "node_modules/gulp/bin/gulp.js lint"
   },
   "repository": {
     "type": "git",
@@ -35,8 +37,14 @@
     "yeoman-generator": "^3.2.0"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.13.0",
     "gulp": "^4.0.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-jshint": "^2.1.0",
     "gulp-load-plugins": "^1.5.0",
+    "jshint": "^2.10.1",
+    "jshint-stylish": "^2.2.1",
     "require-yaml": "0.0.1"
   }
 }
