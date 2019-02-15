@@ -1,0 +1,7 @@
+# Configures Gulp to use the special `gulp` folder. This prevents Yeoman from picking up that folder as a
+# sub-generator and listing it to the end user.
+
+description: "Tasks available for the Exerstats Generator:"
+
+flags:
+  gulpfile: "gulp/gulpfile.js"
