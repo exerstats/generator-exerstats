@@ -1,0 +1,42 @@
+{
+  "name": "generator-exerstats",
+  "description": "Yeoman generator used to create Exerstats repositories and services.",
+  "version": "0.1.0",
+  "author": "Andrew Vaughan <hello@andrewvaughan.io>",
+  "homepage": "https://github.com/exerstats/generator-exerstats#readme",
+  "license": "MIT",
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "microservice",
+    "exercise",
+    "health",
+    "data",
+    "metrics",
+    "dashboard",
+    "fitbit",
+    "pelaton",
+    "apple-health"
+  ],
+  "scripts": {
+    "gulp": "node_modules/gulp/bin/gulp.js",
+    "gulp:tasks": "node_modules/gulp/bin/gulp.js --tasks"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exerstats/generator-exerstats.git"
+  },
+  "bugs": {
+    "url": "https://github.com/exerstats/generator-exerstats/issues"
+  },
+  "dependencies": {
+    "yeoman-generator": "^3.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "require-yaml": "0.0.1"
+  }
+}
